@@ -44,6 +44,15 @@ IMG_SIZE = 224
 IMAGENET_MEAN = [0.485, 0.456, 0.406]
 IMAGENET_STD  = [0.229, 0.224, 0.225]
 
+
+# --------------------------------------------------------------------------
+# Backbones — noms figés après vérification de disponibilité (timm 1.0.28).
+# Le ViT retenu est affiné sur ImageNet-1k pour aligner le domaine de
+# pré-entraînement avec celui de ResNet18 (IMAGENET1K_V1).
+# --------------------------------------------------------------------------
+CNN_BACKBONE = "resnet18"
+CNN_WEIGHTS  = "IMAGENET1K_V1"
+VIT_BACKBONE = "vit_tiny_patch16_224.augreg_in21k_ft_in1k"
 # --------------------------------------------------------------------------
 # Hyperparamètres (valeurs de départ, ajustables aux étapes 5 et 6)
 # --------------------------------------------------------------------------
