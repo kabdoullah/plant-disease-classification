@@ -61,7 +61,7 @@ VIT_BACKBONE = "vit_tiny_patch16_224.augreg_in21k_ft_in1k"
 # --------------------------------------------------------------------------
 BATCH_SIZE      = 32   # entraînement sur GPU T4
 BATCH_SIZE_EVAL = 64
-NUM_EPOCHS      = 5
+NUM_EPOCHS      = 15
 LEARNING_RATE   = 1e-3  # élevé car seule la tête est entraînée
 MAX_PER_CLASS   = 400   # sous-échantillonnage (étape 3)
 

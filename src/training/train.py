@@ -123,4 +123,7 @@ def fit(model, trainable_params, loaders, device, kind, models_dir,
 
     total = time.time() - started
     print(f"\nTerminé en {total:.1f}s — meilleure val acc : {best_val_acc:.4f}")
+    if history["val_acc"].index(max(history["val_acc"])) == epochs - 1:
+        print("⚠️  Meilleure val acc atteinte à la DERNIÈRE epoch "
+              "— le modèle n'a probablement pas convergé.")
     return history, best_val_acc, total
