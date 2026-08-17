@@ -6,12 +6,12 @@ venv/
 .ipynb_checkpoints/
 .DS_Store
 
-# Données et artefacts lourds : jamais versionnés
-data/
-models/*.pt
-models/*.pth
-results/figures/*.png
+# Ancrés à la racine (/) pour ne PAS attraper src/data/
+/data/
+/models/*.pt
+/models/*.pth
+/results/figures/*.png
 
-# On garde les résultats chiffrés, qui sont légers et précieux
-!results/*.csv
-!results/*.json
+# On garde les résultats chiffrés
+!/results/*.csv
+!/results/*.json
