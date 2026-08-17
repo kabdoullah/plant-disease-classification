@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+.DS_Store
+
+# Données et artefacts lourds : jamais versionnés
+data/
+models/*.pt
+models/*.pth
+results/figures/*.png
+
+# On garde les résultats chiffrés, qui sont légers et précieux
+!results/*.csv
+!results/*.json

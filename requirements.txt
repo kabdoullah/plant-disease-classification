@@ -1,0 +1,22 @@
+# PyTorch CPU — installer avec :
+#   pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
+torch
+torchvision
+timm
+
+# API
+fastapi
+uvicorn[standard]
+python-multipart
+
+# Interface
+streamlit
+requests
+
+# Traitement d'images et utilitaires
+pillow
+numpy
+opencv-python-headless
+
+# Interprétabilité
+grad-cam
