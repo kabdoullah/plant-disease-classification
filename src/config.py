@@ -44,6 +44,9 @@ IMG_SIZE = 224
 IMAGENET_MEAN = [0.485, 0.456, 0.406]
 IMAGENET_STD  = [0.229, 0.224, 0.225]
 
+# Répartition des données
+SPLIT_RATIOS = (0.70, 0.15, 0.15)  # train / val / test
+NUM_WORKERS  = 2                    # 2 sur Colab, 0 en local
 
 # --------------------------------------------------------------------------
 # Backbones — noms figés après vérification de disponibilité (timm 1.0.28).
@@ -58,9 +61,9 @@ VIT_BACKBONE = "vit_tiny_patch16_224.augreg_in21k_ft_in1k"
 # --------------------------------------------------------------------------
 BATCH_SIZE      = 32   # entraînement sur GPU T4
 BATCH_SIZE_EVAL = 64
-NUM_EPOCHS      = 8
+NUM_EPOCHS      = 5
 LEARNING_RATE   = 1e-3  # élevé car seule la tête est entraînée
-MAX_PER_CLASS   = 800   # sous-échantillonnage (étape 3)
+MAX_PER_CLASS   = 400   # sous-échantillonnage (étape 3)
 
 # --------------------------------------------------------------------------
 # Chemins — résolus automatiquement selon l'environnement
